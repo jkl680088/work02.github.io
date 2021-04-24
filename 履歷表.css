@@ -1,0 +1,545 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  font-family: "Lato", "Noto Sans TC", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #edeff1;
+  overflow-x: hidden;
+  position: relative;
+}
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 50px 0;
+}
+.header::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.header .avatar {
+  margin-left: 20%;
+  height: 310px;
+  width: 230px;
+  background-image: url("https://imgur.com/RXzXSVZ.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.header .avatar a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.header .intro {
+  width: 45%;
+}
+.intro h2 {
+	font-weight: bold;
+	font-size: 36px;
+	font-family: "微軟正黑體", sans-serif;
+}
+.intro h4 {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 0 20px;
+  font-family: "微軟正黑體", sans-serif;
+}
+@media (max-width: 768px) {
+  body::after {
+    content: "FILE";
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .header {
+    display: block;
+  }
+    .header::before {
+    display: none;
+  }
+    .header .avatar,
+  .header .intro {
+    width: 80%;
+    margin: 0 auto;
+  }
+    .header .avatar {
+    height: 250px;
+    margin-bottom: 30px;
+  }
+  }
+.container {
+  width: 140%;
+  background-color: #d9dbdd;
+  position: relative;
+  left: -20%;
+}
+.breadcrumb {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.breadcrumb li a {
+  display: block;
+  padding: 20px;
+  color: #535557;
+  font-weight: bold;
+  position: relative;
+  transition: 0.5s;
+}
+.breadcrumb li a:hover {
+  font-size: 18px;
+}
+.breadcrumb li + li a::before {
+  content: "";
+  width: 4px;
+  height: 50%;
+  background-color: #535557;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: -2px;
+  transform: rotate(15deg);
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    left: 0;
+  }
+  .breadcrumb {
+    width: 80%;
+  }
+  .breadcrumb li a {
+    padding: 20px;
+  }
+  .breadcrumb li:nth-child(3),
+  .breadcrumb li:nth-child(4) {
+    display: none;
+  }
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  position: relative;
+}
+.content::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #7f8181;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.left-part {
+  width: 45%;
+}
+
+.language-skill h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: "微軟正黑體", sans-serif;
+
+}
+.language span{
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: "微軟正黑體", sans-serif;
+
+}
+.progress-bar-1{
+		position:absolute;right:0px;
+        width:70%;
+        height: 30px;
+        background-color: #f9e1e3;
+            
+            border-radius: 3px;
+        }
+.progress-1{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+        width: 100%;
+        height: 100%;
+        background-color: #e46a70;
+        border-radius: 3px;
+}
+.language .skills{
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  padding: 24px 10px 18px;
+}
+.progress-bar-1:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.progress-bar-2{
+		position:absolute;right:0px;
+        width:70%;
+        height: 30px;
+        background-color: #f9e1e3;
+        border-radius: 3px;
+        }
+.progress-2{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+        width: 60%;
+        height: 100%;
+        background-color: #e46a70;
+        border-radius: 3px;
+}
+
+.progress-bar-2:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.progress-bar-3{
+	position:absolute;right:0px;
+        width:70%;
+        height: 30px;
+        background-color: #f9e1e3;
+        border-radius: 3px;
+        }
+.progress-3{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+        width: 80%;
+        height: 100%;
+        background-color: #e46a70;
+        border-radius: 3px;
+}
+
+.progress-bar-3:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.resume {
+  padding: 40px 0;
+  text-align: left;
+  border-bottom: 5px solid #7f8181;
+}
+.school-experience h3{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "微軟正黑體", sans-serif;
+}
+
+.school-experience h4 {
+  font-size: 20px;
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: "微軟正黑體", sans-serif;
+}
+.school-experience {
+  padding: 40px 0;
+  text-align: left;
+  border-bottom: 5px solid #7f8181;
+}
+.embedded-system h3{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "微軟正黑體", sans-serif;
+}
+
+.embedded span{
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: "微軟正黑體", sans-serif;
+
+}
+.progress-bar-8{
+		position:absolute;right:0px;
+            width:70%;
+            height: 30px;
+            background-color: #f9e1e3;
+            
+            border-radius: 3px;
+        }
+.progress-8{
+		
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+        width: 50%;
+        height: 100%;
+        background-color: #e46a70;
+        border-radius: 3px;
+}
+.embedded .skills3{
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  padding: 24px 10px 18px;
+}
+.progress-bar-8:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.progress-bar-9{
+		position:absolute;right:0px;
+            width:70%;
+            height: 30px;
+            background-color: #f9e1e3;
+            
+            border-radius: 3px;
+        }
+.progress-9{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+        width: 60%;
+        height: 100%;
+        background-color: #e46a70;
+        border-radius: 3px;
+}
+.progress-bar-9:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.embedded-system {
+  padding: 40px 0;
+  text-align: left;
+  border-bottom: 5px solid #7f8181;
+}
+.right-part {
+  width: 45%;
+}
+.work-skill h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "微軟正黑體", sans-serif;
+}
+.work-skill {
+  padding: 40px 0;
+  text-align: left;
+  font-size: 20px;
+  font-family: "微軟正黑體", sans-serif;
+  border-bottom: 5px solid #7f8181;
+}
+.tool h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "微軟正黑體", sans-serif;
+}
+.language .skills2{
+  position: relative;
+  display: flex;
+  margin: 23px 0;
+  padding: 5px 10px 18px;
+}
+.progress-bar-4{
+		position:absolute;right:0px;
+            width:70%;
+            height: 30px;
+            background-color: #f9e1e3;
+            
+            border-radius: 3px;
+        }
+.progress-4{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+            width: 80%;
+            height: 100%;
+            background-color: #e46a70;
+            border-radius: 3px;
+}
+.progress-bar-4:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.progress-bar-5{
+		position:absolute;right:0px;
+            width:70%;
+            height: 30px;
+            background-color: #f9e1e3;
+            
+            border-radius: 3px;
+        }
+.progress-5{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+            width: 50%;
+            height: 100%;
+            background-color: #e46a70;
+            border-radius: 3px;
+}
+.progress-bar-5:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.progress-bar-6{
+		position:absolute;right:0px;
+            width:70%;
+            height: 30px;
+            background-color: #f9e1e3;
+            
+            border-radius: 3px;
+        }
+.progress-6{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+            width: 60%;
+            height: 100%;
+            background-color: #e46a70;
+            border-radius: 3px;
+}
+.progress-bar-6:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.progress-bar-7{
+		position:absolute;right:0px;
+            width:70%;
+            height: 30px;
+            background-color: #f9e1e3;
+            border-radius: 3px;
+        }
+.progress-7{
+		text-align:left;
+		font-size: 20px;
+		font-family: "微軟正黑體", sans-serif;
+            width: 30%;
+            height: 100%;
+            background-color: #e46a70;
+            border-radius: 3px;
+}
+.progress-bar-7:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.tool {
+  padding: 40px 0;
+  text-align: left;
+  border-bottom: 5px solid #7f8181;
+}
+.competition-experience h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: "微軟正黑體", sans-serif;
+
+}
+.competition-experience {
+  padding: 23px 0;
+  text-align: left;
+  font-size: 20px;
+  font-family: "微軟正黑體", sans-serif;
+  border-bottom: 5px solid #7f8181;
+}
+@media (max-width: 768px) {
+  .content {
+    display: block;
+  }
+  .content::before {
+    display: none;
+  }
+  .right-part {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .left-part {
+	width: 45%;
+	}
+}
+/* 專題部分 */
+.topic h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 36px;
+	font-family: "微軟正黑體", sans-serif;
+}
+.topic {
+  padding: 23px 0;
+  text-align: left;
+  font-size: 20px;
+  font-family: "微軟正黑體", sans-serif;
+  border-bottom: 5px solid #7f8181;
+}
+
+.summary h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: "微軟正黑體", sans-serif;
+}
+
+
+.summary p {
+	text-align: justify;
+	font-family:"微軟正黑體", sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	text-indent: 2em;
+}
+
+.summary {
+  padding: 23px 0;
+  text-align: left;
+  font-size: 20px;
+  font-family: "微軟正黑體", sans-serif;
+  border-bottom: 5px solid #7f8181;
+}
+.picture .123 {
+  margin-left: 20%;
+  height: 310px;
+  width: 230px;
+  background-image: url("https://imgur.com/RXzXSVZ.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.picture .123 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
